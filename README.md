@@ -33,3 +33,9 @@ Create a `.env` file in the root directory of the project and specify the paths 
 
 ```env
 TARGET_DIRECTORIES=/Users/XXXXX/Downloads,/Users/XXXXX/Documents,/Users/XXXXX/Pictures,/Users/XXXXX/Music,/Users/XXXXX/Movies
+```
+
+## Demo Video
+Instant file sorting by extension❣️
+
+<img src="https://github.com/user-attachments/assets/2bf4d022-b36e-44d8-b733-3145e79efee0" width="25%" alt="FileOrganizeTool Demo">
