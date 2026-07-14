@@ -41,7 +41,7 @@ FILE_MAPPING = {
 def CleanDirectory(targetDirectory):
     # Check if the specified folder exists.
     if not os.path.exists(targetDirectory):
-        print("Folder not found : {targetDirectory}.")
+        print(f"Folder not found : {targetDirectory}.")
         return
 
     print(f"Starting the cleanup of {targetDirectory}…")
