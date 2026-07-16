@@ -70,8 +70,20 @@ def CleanDirectory(targetDirectory):
             if not os.path.exists(destination_dir):
                 os.makedirs(destination_dir)
 
-            shutil.move(file_path, os.path.join(destination_dir, filename))
-            print(f"Move completed : {filename} -> {folder_name}/")
+            destination_file_path = os.path.join(destination_dir, filename)
+
+            # Handling cases where a file with the same name already exists at the destination.
+            if os.path.exists(destination_file_path):
+                print(f"⚠️ Skip (Already exists) : {filename} in {folder_name}/")
+                continue
+
+            # Error handling (preventing the script from stopping due to unexpected errors).
+            try:
+                shutil.move(file_path, destination_file_path)
+                print(f"Move completed : {filename} -> {folder_name}/")
+            except Exception as e:
+                print(f"❌ Error moving {filename}: {e}")
+            
         
     
 
